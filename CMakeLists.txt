@@ -1,6 +1,6 @@
 # DO NOT CHANGE THIS FILE
 
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.22)
 
 project(hw2 VERSION 2.0.0)
 
