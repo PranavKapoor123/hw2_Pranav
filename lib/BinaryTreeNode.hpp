@@ -10,8 +10,8 @@ template <typename T>
 class BinaryTreeNode
 {
 private:
-    // make constructors and `_next` field only available to `TreeSet` class
-    // to avoid instantiating node and mutating `_next` outside `TreeSet` class.
+    // make constructors and some fields only available to `TreeSet` class
+    // to avoid instantiating node and mutating those fields outside `TreeSet` class.
 
     template <typename U>
     friend class TreeSet;
