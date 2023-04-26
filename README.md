@@ -2,7 +2,7 @@
 
 > Due: 05-19-2023 11:59:59 PM
 
-**Topics**: Trees, Binary Search Trees, Set, Map, (Self-balancing Trees)
+**Topics**: Trees, Binary Search Trees, Set, Map, Red-black Tree
 
 ## Table of Contents
 
@@ -31,9 +31,11 @@
 
 ## Homework Spec
 
-In this homework, you will write one data structure **Binary Search Tree (BST)**, and then build two template libraries based on BST: `TreeSet` and `TreeMap`. 
+In this homework, you will write data structure **Binary Search Tree (BST)**
+and balance the BST using **Red-Black Tree**'s self-balancing insertion.
+And then build two template libraries based on BST: `TreeSet` and `TreeMap`.
 
-You will implement `TreeSet` first and then implement `TreeMap` as a derived class of `LinkedList` you implemented.
+You will implement `TreeSet` first and then implement `TreeMap` using `TreeSet`.
 
 > In reality, `TreeSet` and `TreeMap` (ordered set and ordered map) are implemented using self-balanced trees (Red-Black Trees) to ensure a stable $O(\log n)$ search time.
 
@@ -44,39 +46,39 @@ You will be graded only on the same (hidden) test cases your TAs created.
 We provided some tests cases in [./tests](./tests). Feel free to modify and add more test cases, but the [./tests](./tests) in your submission will not be
 graded. However, you will be able to see the results for your submitted test cases on Gradescope.
 
-* `TreeSet` implementation - 60% 
-* `TreeMap` implementation - 15%
-* `BalancedTreeSet` implementation - 15%
-* Memory Safety - 10%
+- `TreeSet` implementation - 60%
+- `TreeMap` implementation - 15%
+- `BalancedTreeSet` implementation - 15%
+- Memory Safety - 10%
 
 > **NOTE:** If you are running out of time to implement all methods (or just want to see the project can be compiled), please at least provide a syntactically valid empty method definition for each method in `lib/*.cpp`.
 
 ### TreeSet
 
-* Check the definition for `BinaryTreeNode` in [lib/BinaryTreeNode.hpp](./lib/BinaryTreeNode.hpp).
-* Check the spec in [lib/TreeSet.hpp](./lib/TreeSet.hpp) and implement all methods in [lib/TreeSet.cpp](./lib/TreeSet.cpp).
-* Create test cases in [tests/TreeSetTest.cpp](./tests/TreeSetTest.cpp).
+- Check the definition for `BinaryTreeNode` in [lib/BinaryTreeNode.hpp](./lib/BinaryTreeNode.hpp).
+- Check the spec in [lib/TreeSet.hpp](./lib/TreeSet.hpp) and implement all methods in [lib/TreeSet.cpp](./lib/TreeSet.cpp).
+- Create test cases in [tests/TreeSetTest.cpp](./tests/TreeSetTest.cpp).
 
 ### TreeMap
 
-* Check the spec in [lib/TreeMap.hpp](./lib/TreeMap.hpp) and implement all methods in [lib/TreeMap.cpp](./lib/TreeMap.cpp).
-* Create test cases in [tests/TreeMapTest.cpp](./tests/TreeMapTest.cpp).
+- Check the spec in [lib/TreeMap.hpp](./lib/TreeMap.hpp) and implement all methods in [lib/TreeMap.cpp](./lib/TreeMap.cpp).
+- Create test cases in [tests/TreeMapTest.cpp](./tests/TreeMapTest.cpp).
 
 ### BalancedTreeSet
 
-* Use Red-Black Tree to keep the BST balanced, check definition `Color` in [lib/BinaryTreeNode.hpp](./lib/BinaryTreeNode.hpp).
-* You only need to keep the tree balanced when **insertion (Textbook 13.3)**.
-* Check the spec in [lib/TreeSet.hpp](./lib/TreeSet.hpp) and implement the following methods in [lib/TreeSet.cpp](./lib/TreeSet.cpp).
+- Use Red-Black Tree to keep the BST balanced, check definition `Color` in [lib/BinaryTreeNode.hpp](./lib/BinaryTreeNode.hpp).
+- You only need to keep the tree balanced when **insertion (Textbook 13.3)**.
+- Check the spec in [lib/TreeSet.hpp](./lib/TreeSet.hpp) and implement the following methods in [lib/TreeSet.cpp](./lib/TreeSet.cpp).
   - `void fix_violation(BinaryTreeNode<T> *z);`
   - `void rotate_left(BinaryTreeNode<T> *x);`
   - `void rotate_right(BinaryTreeNode<T> *y);`
 
 **NOTE**
 All the tests in `TreeSetTest` can be passed without balancing the tree.
-If you don't intent to implement Red-Black Tree, please put these empty function at the end of [lib/TreeSet.cpp](./lib/TreeSet.cpp).
+If you don't intend to implement Red-Black Tree, please put these empty function at the end of [lib/TreeSet.cpp](./lib/TreeSet.cpp).
 
 ```cpp
-// Red-Black Tree Functions 
+// Red-Black Tree Functions
 template <typename T>
 void TreeSet<T>::rotate_left(BinaryTreeNode<T> *x) {}
 
