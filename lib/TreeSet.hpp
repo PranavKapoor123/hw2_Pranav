@@ -47,7 +47,9 @@ public:
     /// @return The number of elements in the tree.
     size_t size() const;
 
-    /// @brief adds a value to the set
+    /// @brief adds a value to the set.
+    /// If there is an element whose value equals (checked by comparator) `value`,
+    /// the existing value will be replaced by `value`.
     /// @param value put this value into the set
     void add(T value);
 
