@@ -12,7 +12,6 @@ class BinaryTreeNode
 private:
     // make constructors and some fields only available to `TreeSet` class
     // to avoid instantiating node and mutating those fields outside `TreeSet` class.
-
     template <typename U>
     friend class TreeSet;
 
@@ -73,10 +72,9 @@ public:
         }
 
         // Property 5: Every path from a node to a descendant nullptr contains the same number of Black nodes
-        int left_black_height = _left ? _left->black_height() : 1;
-        int right_black_height = _right ? _right->black_height() : 1;
-        // allow 1 difference in height for even number of nodes
-        if (abs(left_black_height - right_black_height) > 1)
+        int left_black_height = _left ? _left->black_height() : 0;
+        int right_black_height = _right ? _right->black_height() : 0;
+        if (left_black_height != right_black_height)
         {
             return false;
         }
