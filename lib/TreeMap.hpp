@@ -33,11 +33,6 @@ public:
     /// @return the mapped value
     std::optional<TValue> get(TKey key) const;
 
-    /// @brief remove a key-value pair from the map
-    /// @param key unqiue key to remove from map
-    /// @return true if key was in the map and removed, otherwise false
-    bool remove(TKey key);
-
     /// @brief check if a key is in the map
     /// @param key unique key to search for
     /// @return true if key is in the map, otherwise false

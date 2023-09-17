@@ -58,11 +58,6 @@ public:
     /// @return true if value is in the set, otherwise false
     bool contains(T value) const;
 
-    /// @brief remove a value from the set
-    /// @param value to remove
-    /// @return true if value was in the set and removed, otherwise false
-    bool remove(T value);
-
     /// @brief check if the set is empty
     /// @return true if the set is empty, otherwise false
     bool is_empty() const;
@@ -94,25 +89,10 @@ public:
     /// @return a reference to this set
     TreeSet &operator+=(const TreeSet &other);
 
-    /// @brief set difference
-    /// @param other another set
-    /// @return the result of the difference
-    TreeSet operator-(const TreeSet &other);
-
-    /// @brief in-place set difference
-    /// @param other another set
-    /// @return a reference to this set
-    TreeSet &operator-=(const TreeSet &other);
-
     /// @brief set intersection
     /// @param other another set
     /// @return the result of the intersection
     TreeSet operator&(const TreeSet &other);
-
-    /// @brief in-place set intersection
-    /// @param other another set
-    /// @return a reference to this set
-    TreeSet &operator&=(const TreeSet &other);
 
     /// @brief set equal
     /// @param other another set

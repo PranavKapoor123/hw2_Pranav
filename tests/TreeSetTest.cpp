@@ -37,17 +37,6 @@ TEST(TreeSetTest, InstantiateTreeWithComparator)
     ASSERT_EQ(s.min(), 4);
 }
 
-
-TEST(TreeSetTest, RemoveFromMiddle)
-{
-    TreeSet<int> s({ 1, 2, 3, 4, 5 });
-    s.remove(3);
-
-    ASSERT_EQ(s.size(), 4);
-    ASSERT_FALSE(s.contains(3));
-    ASSERT_EQ(s.to_vector(), std::vector<int>({ 1, 2, 4, 5 }));
-}
-
 TEST(TreeSetTest, UnionTwo)
 {
     TreeSet<int> s1({ 1, 2, 3, 4, 5 });
