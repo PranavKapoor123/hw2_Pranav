@@ -1,6 +1,6 @@
 # Homework 2 - Binary Search Tree
 
-> Due: TBD
+> Due: November 5, 2023 11:59 PM
 
 **Topics**: Trees, Binary Search Trees, Set, Map, Red-black Tree
 
