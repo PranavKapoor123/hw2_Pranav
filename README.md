@@ -90,7 +90,7 @@ See [lib/TreeSet.cpp](./lib/TreeSet.cpp) line 8 for provided example.
 
 Keep in mind, since `TreeSet` is generic,
 we can leverage it to implement a `TreeMap`.
-This is done by storing entries as ` std::pair<TKey, TValue>`` in each tree node, 
+This is done by storing entries as `std::pair<TKey, TValue>` in each tree node, 
 where  `TKey`is the type of the key and`TValue` is the type of its associated value.
 
 ### BalancedTreeSet
