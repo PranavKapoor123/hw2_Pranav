@@ -60,10 +60,38 @@ graded. However, you will be able to see the results for your submitted test cas
   - **NOTE**: you only need to implement `add` function of set, `remove` function is not required.
 - Create test cases in [tests/TreeSetTest.cpp](./tests/TreeSetTest.cpp).
 
+Since `TreeSet` is a generic class for type variable `T`,
+we have to make sure that we can compare two elements of type `T` in order to build a BST.
+Therefore, each `TreeSet` will need an `_comparator` to compare two elements of type `T`.
+In this assignment, we will define the `_comparator` as a function with type
+
+$$
+cmp : T \times T \rightarrow \{-1, 0, 1\}
+$$
+
+where
+
+- $cmp(x, y) = -1$ if $x < y$,
+- $cmp(x, y) = 0$ if $x = y$,
+- $cmp(x, y) = 1$ if $x > y$,
+
+in C++, this function is declared as
+
+```cpp
+std::function<int(T, T)> _comparator;
+```
+
+See [lib/TreeSet.cpp](./lib/TreeSet.cpp) line 8 for provided example.
+
 ### TreeMap
 
 - Check the spec in [lib/TreeMap.hpp](./lib/TreeMap.hpp) and implement all methods in [lib/TreeMap.cpp](./lib/TreeMap.cpp).
 - Create test cases in [tests/TreeMapTest.cpp](./tests/TreeMapTest.cpp).
+
+Keep in mind, since `TreeSet` is generic,
+we can leverage it to implement a `TreeMap`.
+This is done by storing entries as ` std::pair<TKey, TValue>`` in each tree node, 
+where  `TKey`is the type of the key and`TValue` is the type of its associated value.
 
 ### BalancedTreeSet
 
