@@ -1,6 +1,6 @@
 # Homework 2 - Binary Search Tree
 
-> Due: November 5, 2023 11:59 PM
+> Due: November 3, 2024 11:59 PM
 
 **Topics**: Trees, Binary Search Trees, Set, Map, Red-black Tree
 
@@ -156,7 +156,7 @@ Use one of the following options to set up your environment.
 
 - Click the following button to set up the environment.
 
-  [![Setup Local Dev Container](https://img.shields.io/static/v1?label=Local%20Dev%20Container&message=Setup&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/ecs36c-fq2023/hw2)
+  [![Setup Local Dev Container](https://img.shields.io/static/v1?label=Local%20Dev%20Container&message=Setup&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/ecs36c-fq2024/hw2)
 
 - When asked for selecting a Kit to configure CMake, choose **GCC**.
 
@@ -168,7 +168,7 @@ Use one of the following options to set up your environment.
 
 - Run the following command inside the integrated terminal.
 
-  `git clone https://github.com/ecs36c-fq2023/hw2 ecs36c-hw2`
+  `git clone https://github.com/ecs36c-fq2024/hw2 ecs36c-hw2`
 
 - Run `code ./ecs36c-hw2` to open the folder.
 
@@ -180,7 +180,7 @@ Use one of the following options to set up your environment.
 - Run the following commands
 
   ```bash
-  git clone https://github.com/ecs36c-fq2023/hw2 ecs36c-hw2
+  git clone https://github.com/ecs36c-fq2024/hw2 ecs36c-hw2
   cd ./ecs36c-hw2
   mkdir build
   cd build
